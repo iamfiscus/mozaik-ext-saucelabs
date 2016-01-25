@@ -15,14 +15,13 @@ class Activity extends Component {
     }
 
     getApiRequest() {
-        let { owner, activity } = this.props;
+        let { activity, frequency } = this.props;
 
         return {
-            id:     `saucelabs.activity`
-            // params: {
-            //     owner:      owner,
-            //     activity: activity
-            // }
+            id:     `saucelabs.activity`,
+            params: {
+                activity: activity
+            }
         };
     }
 
@@ -33,29 +32,29 @@ class Activity extends Component {
     }
 
     render() {
+        console.log('Activity', this.state)
+        // var jobNodes = _.map(this.state.jobs, (job, index) => {
+        //     return (<JobItem job={job} key={index} />);
+        // });
 
         return (
-            <div className="saucelabs">
+            <div>
                 <div className="widget__header">
-                    <span className="travis__activity__slug">
-                        <span className="widget__header__subject">Header</span>
-                    </span>
+                    Suace Labs: Activity
                     <span className="widget__header__count">
-                      0
+                        {this.state.activity.length}
                     </span>
-                    <i className="fa fa-bug" />
+                    <i className="fa fa-check-square-o" />
                 </div>
                 <div className="widget__body">
-                    Test
+                    {this.state.activity}
                 </div>
             </div>
         );
     }
 }
 
+reactMixin(Activity.prototype, ListenerMixin);
+reactMixin(Activity.prototype, Mozaik.Mixin.ApiConsumer);
 
-
-reactMixin(Repository.prototype, ListenerMixin);
-reactMixin(Repository.prototype, Mozaik.Mixin.ApiConsumer);
-
-export { Repository as default };
+export { Activity as default };
