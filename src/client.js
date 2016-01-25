@@ -53,6 +53,18 @@ const client = function (context) {
 
       return def.promise;
     },
+    status() {
+      var def = Promise.defer();
+
+      saucelabs.getServiceStatus(function (err, res) {
+        if (err) { def.reject(err); }
+        // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
+        console.log(res);
+        def.resolve(res);
+      });
+
+      return def.promise;
+    },
     jobs(params) {
       var def = Promise.defer();
 
@@ -60,17 +72,7 @@ const client = function (context) {
         if (err) { def.reject(err); }
         // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
 
-        // if (params.limit) {
-        //   res = _.dropRight(res, 10);
-        // }
-        // _(res).forEach(function(id) {
-        //   saucelabs.getJobs(id, function (err, res) {
-        //     if (err) { def.reject(err); }
-        //     // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
-        //     console.log('id:', res);
-            def.resolve(res);
-        //   });
-        // });
+        def.resolve(res);
       });
 
       return def.promise;

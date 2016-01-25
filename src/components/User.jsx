@@ -39,7 +39,7 @@ class User extends Component {
         return (
             <div>
                 <div className="widget__header">
-                    Suace Labs: Activity
+                    Sauce Labs: Activity
                     <i className="fa fa-check-square-o" />
                 </div>
                 <div className="widget__body">

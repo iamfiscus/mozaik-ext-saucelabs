@@ -41,7 +41,7 @@ class Jobs extends Component {
         return (
             <div>
                 <div className="widget__header">
-                    Suace Labs: Jobs
+                    Sauce Labs: Jobs
                     <span className="widget__header__count">
                         {this.state.jobs}
                     </span>

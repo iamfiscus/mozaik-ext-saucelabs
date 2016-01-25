@@ -40,7 +40,7 @@ class Activity extends Component {
         return (
             <div>
                 <div className="widget__header">
-                    Suace Labs: Activity
+                    Sauce Labs: Activity
                     <span className="widget__header__count">
                         {this.state.activity.length}
                     </span>
