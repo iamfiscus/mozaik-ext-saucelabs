@@ -32,7 +32,7 @@ class Status extends Component {
     }
 
     render() {
-        console.log('Status', this.state);
+        // console.log('Status', this.state);
         var widgetBodyNode = (<div className="widget__body" />);
 
         if (this.state.status) {
