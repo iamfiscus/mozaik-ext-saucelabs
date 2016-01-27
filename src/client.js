@@ -5,8 +5,8 @@ import SauceLabs from 'saucelabs';
 import _         from 'lodash';
 
 var sauceLabsConfig = {
-  username: config.get('saucelabs.basicAuthUser'),
-  password: config.get('saucelabs.basicAuthPassword')
+  username: config.get('saucelabs.auth.user'),
+  password: config.get('saucelabs.auth.token')
 };
 
 var saucelabs = new SauceLabs(sauceLabsConfig);
