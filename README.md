@@ -62,7 +62,7 @@ parma   | required | rules         | description
 
 ```javascript
 {
-    type: 'saucelabs.status',
+    type: 'saucelabs.jobs',
     columns: 1, rows: 1,
     limit: 50,
     x: 0, y: 0
