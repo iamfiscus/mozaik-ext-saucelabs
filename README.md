@@ -49,3 +49,24 @@ key          | env key                           | required | description
     x: 0, y: 0
 }
 ```
+
+## SauceLabs jobs
+
+> Shows the current SauceLabs status from [http://status.saucelabs.com/](http://status.saucelabs.com/)
+
+![SauceLabs Jobs](https://raw.githubusercontent.com/iamfiscus/mozaik-ext-saucelabs/master/_doc-assets/saucelabs-jobs.png)
+
+parma   | required | rules         | description
+--------|----------|---------------|-----------------------------------
+`limit` | optional | max_value=100 | *limit the number of jobs being return*
+
+### usage
+
+```javascript
+{
+    type: 'saucelabs.status',
+    columns: 1, rows: 1,
+    limit: 50,
+    x: 0, y: 0
+}
+```

@@ -57,15 +57,12 @@ describe('SauceLabs — Jobs', () => {
       id: 'saucelabs.jobs',
       params: {
         jobs: undefined,
-        limit: null
+        limit: undefined
       }
     });
   });
 
   describe('having no jobs', () => {
-    // jobs.setState({
-    //   jobs: mockJobs
-    // });
 
     it('should show an empty widget body', function() {
       let widgetBody = TestUtils.findRenderedDOMComponentWithClass(jobs, 'widget__body');

@@ -66,6 +66,7 @@ const client = function (context) {
       return def.promise;
     },
     jobs(params) {
+
       var def = Promise.defer();
 
       saucelabs.getJobs(function (err, res) {
@@ -73,8 +74,8 @@ const client = function (context) {
         // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
 
         // @TODO Hack because node-saucelabs doesn't support limiting
-        if (params.limit && _.isInteger(params.limit) && params.limit >= 100) {
-          _.dropRight(res, parseInt(100 - params.limit, 10));
+        if (params.limit && Number.isInteger(params.limit) && params.limit <= 100) {
+          res = _.dropRight(res, parseInt(100 - params.limit, 10));
         }
 
         def.resolve(res);

@@ -22,7 +22,7 @@ class Jobs extends Component {
       id: `saucelabs.jobs`,
       params: {
         jobs: jobs,
-        limit: null
+        limit: limit
       }
     };
   }
