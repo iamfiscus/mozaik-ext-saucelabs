@@ -44,7 +44,7 @@ key          | env key                           | required | description
 
 ```javascript
 {
-    type: 'github.status',
+    type: 'saucelabs.status',
     columns: 1, rows: 1,
     x: 0, y: 0
 }
