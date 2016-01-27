@@ -1,6 +1,6 @@
 # Mozaïk saucelabs extension
 
-[![Travis CI](https://img.shields.io/travis/plouc/mozaik-ext-saucelabs.svg?style=flat-square)](https://travis-ci.org/plouc/mozaik-ext-saucelabs)
+[![Travis CI](https://img.shields.io/travis/iamfiscus/mozaik-ext-saucelabs.svg?style=flat-square)](https://travis-ci.org/plouc/mozaik-ext-saucelabs)
 
 ## Jenkins Client Configuration
 

@@ -42,9 +42,6 @@
     "semantic-release": "^4.3.5",
     "sinon": "^1.15.4"
   },
-  "peerDependencies": {
-    "mozaik": "1.x"
-  },
   "scripts": {
     "commit": "git-cz",
     "test": "mocha --opts mocha.opts ./src/tests/**/*.test.js",
