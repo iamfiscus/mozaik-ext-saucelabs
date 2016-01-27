@@ -64,8 +64,10 @@
     "url": "https://github.com/iamfiscus/mozaik-ext-saucelabs/issues"
   },
   "homepage": "https://github.com/iamfiscus/mozaik-ext-saucelabs#readme",
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "browserify": {
     "transform": [
