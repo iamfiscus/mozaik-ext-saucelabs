@@ -1,5 +1,4 @@
-# "test": "mocha --opts mocha.opts ./src/tests/**/*.test.js && jest",
-sudo: false
+sudo: true
 language: node_js
 cache:
   directories:
