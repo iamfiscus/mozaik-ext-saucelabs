@@ -52,8 +52,6 @@ key          | env key                           | required | description
 
 ## SauceLabs jobs
 
-> Shows the current SauceLabs status from [http://status.saucelabs.com/](http://status.saucelabs.com/)
-
 ![SauceLabs Jobs](https://raw.githubusercontent.com/iamfiscus/mozaik-ext-saucelabs/master/_doc-assets/saucelabs-jobs.png)
 
 parma   | required | rules         | description
