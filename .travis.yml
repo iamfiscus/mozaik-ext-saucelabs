@@ -1,3 +1,4 @@
+# "test": "mocha --opts mocha.opts ./src/tests/**/*.test.js && jest",
 sudo: false
 language: node_js
 cache:

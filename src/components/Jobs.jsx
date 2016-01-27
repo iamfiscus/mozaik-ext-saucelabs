@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { ListenerMixin }         from 'reflux';
-import reactMixin            from 'react-mixin';
-import _                 from 'lodash';
+import { ListenerMixin }   from 'reflux';
+import reactMixin          from 'react-mixin';
+import _                   from 'lodash';
 import moment              from 'moment';
 import Mozaik              from 'mozaik/browser';
 import JobItem             from './JobItem.jsx';
@@ -34,8 +34,8 @@ class Jobs extends Component {
   }
 
   render() {
-
-    let count = (this.state.jobs) ? ({this.state.jobs.length}) : 0;
+    // console.log(this.state);
+    let count = (this.state.jobs) ? this.state.jobs.length : 0;
     count = (<span className="widget__header__count">{count}</span>)
 
     let jobNodes = _.map(this.state.jobs, (job, index) => {

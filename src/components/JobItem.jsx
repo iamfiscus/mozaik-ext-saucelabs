@@ -1,19 +1,21 @@
-var React  = require('react');
-var moment = require('moment');
+var React  = require('react'),
+    moment = require('moment'),
+    _      = require('lodash');
 
 var JobItem = React.createClass({
 
   render() {
+
     var classes,
       start,
       end,
       title   = this.props.job.id,
       browser = this.props.job.browser.toLowerCase(),
       os      = this.props.job.os.toLowerCase(),
-      status  = <i title={this.props.job.status} className="fa fa-question-circle" />;
+      status  = <i title={this.props.job.status} className="fa fa-question-circle saucelabs__jobs__item__status" />;
 
     // Title
-    if (this.props.job.name) {
+    if (_.isString(this.props.job.name) && this.props.job.name !== '') {
       title = this.props.job.name;
     }
 
@@ -46,7 +48,7 @@ var JobItem = React.createClass({
     // OS
     if(os.indexOf('windows') >= 0) {
       os = 'windows';
-    } else if(os.indexOf('apple') >= 0 || os.indexOf('macintosh') >= 0) {
+    } else if(os.indexOf('apple') >= 0 || os.indexOf('mac') >= 0) {
       os = 'apple';
     } else if(os.indexOf('linux') >= 0) {
       os = 'linux';
@@ -57,16 +59,16 @@ var JobItem = React.createClass({
 
     // Status
     if (this.props.job.pass) {
-        status = <i title={this.props.job.pass} className="fa fa-check-circle" />;
+        status = <i title={this.props.job.pass} className="fa fa-check-circle saucelabs__jobs__item__status" />;
     } else if (this.props.job.error) {
-        status = <i title={this.props.job.error} className="fa fa-exclamation-circle" />;
+        status = <i title={this.props.job.error} className="fa fa-exclamation-circle saucelabs__jobs__item__status" />;
     }
 
     return (
       <div className="list__item saucelabs__jobs__item">
-        <div className="saucelabs__jobs__item__title" title={this.props.job.id}>
+        <div className="saucelabs__jobs__item__header">
           {status}
-          <span title={this.props.job.id}>{title}</span>
+          <span className="saucelabs__jobs__item__title" title={this.props.job.id}>{title}</span>
         </div>
         {start}
         {end}
