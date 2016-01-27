@@ -36,7 +36,8 @@ class Jobs extends Component {
   render() {
     console.log('Jobs', this.state);
 
-    let count = (this.state.jobs) ? (<span className="widget__header__count">{this.state.jobs.length}</span>) : 0;
+    let count = (this.state.jobs) ? ({this.state.jobs.length}) : 0;
+    count = (<span className="widget__header__count">{count}</span>)
 
     let jobNodes = _.map(this.state.jobs, (job, index) => {
       return (<JobItem job={job} key={index} />);
