@@ -34,7 +34,7 @@ key          | env key                           | required | description
 }
 ```
 
-## Github status
+## SauceLabs status
 
 > Shows the current SauceLabs status from [http://status.saucelabs.com/](http://status.saucelabs.com/)
 
