@@ -1,2 +1,5 @@
 ./src/tests
+./_doc-assets
 .travis.yml
+.gitignore
+mocha.opts

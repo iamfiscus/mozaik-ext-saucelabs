@@ -1,6 +1,5 @@
 {
   "name": "mozaik-ext-saucelabs",
-  "version": "0.0.0",
   "description": "Mozaïk saucelabs extension",
   "engines": {
     "node": "0.10.x"
@@ -39,7 +38,8 @@
     "jsdom": "^2.0.0",
     "mocha": "^2.2.5",
     "mockery": "^1.4.0",
-    "sinon": "^1.15.4"
+    "sinon": "^1.15.4",
+    "semantic-release": "^4.3.5"
   },
   "peerDependencies": {
     "mozaik": "1.x"
@@ -47,11 +47,12 @@
   "scripts": {
     "commit": "git-cz",
     "test": "mocha --opts mocha.opts ./src/tests/**/*.test.js",
-    "eslint": "eslint ./src/*"
+    "eslint": "eslint ./src/*",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamfiscus/mozaik-ext-saucelabs.git"
+    "url": "https://github.com/iamfiscus/mozaik-ext-saucelabs.git"
   },
   "keywords": [
     "SauceLabs"
