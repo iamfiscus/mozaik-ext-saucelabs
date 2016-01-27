@@ -26,12 +26,14 @@ var JobItem = React.createClass({
     }
 
     // Browser
-    if(browser.indexOf('opera') >= 0) {
-      browser = 'opera';
+    if(browser.indexOf('google') >= 0) {
+      browser = 'chrome';
     } else if(browser.indexOf('safari') >= 0) {
       browser = 'safari';
-    } else if(browser.indexOf('google') >= 0) {
-      browser = 'chrome';
+    } else if(browser.indexOf('firefox') >= 0) {
+      browser = 'firefox';
+    } else if(browser.indexOf('opera') >= 0) {
+      browser = 'opera';
     } else if(browser.indexOf('explorer') >= 0) {
       browser = 'internet-explorer';
     } else if(browser.indexOf('edge') >= 0) {

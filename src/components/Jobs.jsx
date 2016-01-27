@@ -34,7 +34,6 @@ class Jobs extends Component {
   }
 
   render() {
-    console.log('Jobs', this.state);
 
     let count = (this.state.jobs) ? ({this.state.jobs.length}) : 0;
     count = (<span className="widget__header__count">{count}</span>)

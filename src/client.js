@@ -23,7 +23,7 @@ const client = function (context) {
       saucelabs.getUserActivity(function (err, res) {
           if (err) { def.reject(err); }
           // mozaik.logger.info(chalk.yellow(`[saucelabs] calling user activity`));
-          console.log(res);
+
           def.resolve(res);
       });
 
@@ -35,7 +35,7 @@ const client = function (context) {
       saucelabs.getAccountDetails(function (err, res) {
         if (err) { def.reject(err); }
         // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
-        console.log(res);
+
         def.resolve(res);
       });
 
@@ -47,7 +47,7 @@ const client = function (context) {
       saucelabs.getAccountUsage(function (err, res) {
         if (err) { def.reject(err); }
         // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
-        console.log(res);
+
         def.resolve(res);
       });
 
@@ -59,7 +59,7 @@ const client = function (context) {
       saucelabs.getServiceStatus(function (err, res) {
         if (err) { def.reject(err); }
         // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
-        console.log(res);
+
         def.resolve(res);
       });
 
@@ -71,6 +71,11 @@ const client = function (context) {
       saucelabs.getJobs(function (err, res) {
         if (err) { def.reject(err); }
         // mozaik.logger.info(chalk.yel low(`[saucelabs] calling account details`));
+
+        // @TODO Hack because node-saucelabs doesn't support limiting
+        if (params.limit && _.isInteger(params.limit) && params.limit >= 100) {
+          _.dropRight(res, parseInt(100 - params.limit, 10));
+        }
 
         def.resolve(res);
       });
