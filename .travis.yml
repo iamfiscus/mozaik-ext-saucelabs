@@ -15,6 +15,7 @@ before_install:
 before_script:
   - npm prune
 script:
+  - npm test
   - npm check-coverage
 after_success:
   - npm report-coverage
