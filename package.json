@@ -22,12 +22,12 @@
   },
   "main": "./src/components/index.js",
   "devDependencies": {
-    "travis-ci": "^2.0.3",
-    "babelify": "^6.1.3",
     "babel": "^5.8.12",
     "babel-eslint": "^1.0.6",
     "babel-register": "6.4.3",
+    "babelify": "^6.1.3",
     "chai": "^3.2.0",
+    "codecov.io": "0.1.6",
     "commitizen": "2.5.0",
     "cz-conventional-changelog": "1.1.5",
     "del": "^1.1.1",
@@ -39,15 +39,19 @@
     "gulp-regex-replace": "^0.2.3",
     "gulp-rename": "^1.2.0",
     "gulp-strip-debug": "^1.0.2",
+    "istanbul": "0.4.2",
     "jsdom": "^2.0.0",
     "mocha": "^2.2.5",
     "mockery": "^1.4.0",
     "semantic-release": "^4.3.5",
-    "sinon": "^1.15.4"
+    "sinon": "^1.15.4",
+    "travis-ci": "^2.0.3"
   },
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha --opts mocha.opts ./src/tests/**/*.test.js",
+    "test": "./node_modules/.bin/istanbul cover -v ./node_modules/.bin/_mocha -- -R spec  --compilers js:babel/register --require ./src/tests/setup.js --recursive ./src/tests/**/*.test.js",
+    "check-coverage": "./node_modules/.bin/istanbul check-coverage --statements=90 --branches=100 --functions=90 --lines=90",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "eslint": "eslint ./src/*",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -56,10 +60,14 @@
     "url": "https://github.com/iamfiscus/mozaik-ext-saucelabs.git"
   },
   "keywords": [
-    "SauceLabs"
+    "saucelabs",
+    "mozaik",
+    "widget",
+    "extension",
+    "dashboard"
   ],
   "author": "Jd Fiscus (http://iamfiscus.com/)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iamfiscus/mozaik-ext-saucelabs/issues"
   },

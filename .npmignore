@@ -1,5 +1,6 @@
 ./src/tests
 ./_doc-assets
 .travis.yml
+.istanbul.yml
 .gitignore
 mocha.opts
