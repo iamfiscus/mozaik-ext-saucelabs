@@ -25,7 +25,7 @@ key          | env key                           | required | description
 
 ### usage
 
-```javascript
+```javascript 
 {
   //…
   api: {
