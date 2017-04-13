@@ -1,7 +1,7 @@
 # Mozaïk saucelabs extension
 
 [![Travis CI](https://img.shields.io/travis/iamfiscus/mozaik-ext-saucelabs.svg?style=flat-square)](https://travis-ci.org/plouc/mozaik-ext-saucelabs)
-[![codecov coverage](https://img.shields.io/codecov/c/github/iamfiscus/mozaik-ext-saucelabs.svg?style=flat-square)](https://codecov.io/github/kentcdodds/mozaik-ext-saucelabs)
+[![codecov coverage](https://img.shields.io/codecov/c/github/iamfiscus/mozaik-ext-saucelabs.svg?style=flat-square)](https://codecov.io/github/iamfiscus/mozaik-ext-saucelabs)
 [![version](https://img.shields.io/npm/v/mozaik-ext-saucelabs.svg?style=flat-square)](http://npm.im/mozaik-ext-saucelabs)
 [![downloads](https://img.shields.io/npm/dm/mozaik-ext-saucelabs.svg?style=flat-square)](http://npm-stat.com/charts.html?package=mozaik-ext-saucelabs&from=2015-08-01)
 [![MIT License](https://img.shields.io/npm/l/mozaik-ext-saucelabs.svg?style=flat-square)](http://opensource.org/licenses/MIT)
@@ -25,7 +25,7 @@ key          | env key                           | required | description
 
 ### usage
 
-```javascript 
+```javascript
 {
   //…
   api: {
