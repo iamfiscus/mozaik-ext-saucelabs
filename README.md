@@ -59,7 +59,7 @@ key          | env key                           | required | description
 
 ![SauceLabs Jobs](https://raw.githubusercontent.com/iamfiscus/mozaik-ext-saucelabs/master/_doc-assets/saucelabs-jobs.png)
 
-parma   | required | rules         | description
+param   | required | rules         | description
 --------|----------|---------------|-----------------------------------
 `limit` | optional | max_value=100 | *limit the number of jobs being return*
 
